@@ -25,8 +25,17 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile("org.hsqldb:hsqldb")
+
+
+    compile group: 'org.springframework.security', name: 'spring-security-crypto', version: '3.1.0.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile("org.hsqldb:hsqldb")
+
+    runtimeOnly('mysql:mysql-connector-java')
+    compileOnly('org.projectlombok:lombok')
+    
+    
 }
